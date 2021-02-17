@@ -1,12 +1,13 @@
 package com.tw;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DriveThrough {
-    private final List<Car> cars = new ArrayList<>();
+    private List<Car> cars;
 
-    public DriveThrough() {}
+    public DriveThrough(List<Car> cars) {
+        this.cars = cars;
+    }
 
     public void next(){
         cars.forEach(car -> {
