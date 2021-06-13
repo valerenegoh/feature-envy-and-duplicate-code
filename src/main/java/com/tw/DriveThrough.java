@@ -10,10 +10,7 @@ public class DriveThrough {
     }
 
     public void next(){
-        cars.forEach(car -> {
-            car.y++;
-            car.x++;
-        });
+        cars.forEach(car -> { car.move(); });
     }
 
     public void queueCar(Car car) {
@@ -22,9 +19,7 @@ public class DriveThrough {
 
     public String print() {
         StringBuilder output = new StringBuilder();
-        cars.forEach(car -> {
-            output.append("\nCar at: ").append(car.x).append(", ").append(car.y);
-        });
+        cars.forEach(car -> { output.append(car.print()); });
         return output.toString();
     }
 }

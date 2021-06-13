@@ -8,4 +8,15 @@ public class Car {
         this.x = x;
         this.y = y;
     }
+
+    public void move(){
+        y++;
+        x++;
+    }
+
+    public String print() {
+        StringBuilder output = new StringBuilder();
+        output.append("\nCar at: ").append(x).append(", ").append(y);
+        return output.toString();
+    }
 }
